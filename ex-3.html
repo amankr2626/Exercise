@@ -1,0 +1,95 @@
+import java.sql.*;
+import java.util.*;
+
+public class test
+{
+	public static void main(String[] args)
+	
+	   throws Exception
+	   {
+       		   Class.forName("sun.jdbc.odbc.jdbcodbcDriver");
+		   Connection c= DriverManager.getConnection("jdbc.odbc:@localhost1521:exe","system","oracle");
+		   Statement  s= c.createStatement();
+		   string command = "insert into customer values (id,name,desc,email,dob)";
+		   s.executeUpdate(command); 
+		   c.close();
+	   }
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Info</title>
+
+<script>
+string id = request.getParameter("id");
+string name = request.getParameter("name");
+string desc = request.getParameter("desc");
+string email = request.getParameter("email");
+string dob = request.getParameter("dob");
+
+test t1 = new test();
+t1.myFunction();
+</script>
+
+</script>
+function myFunction()
+{
+var id = document.getElementById("id");
+var name = document.getElementById("name");
+var desc = document.getElementById("desc");
+var email = document.getElementById("email");
+var dob = document.getElementById("dob");
+}
+</script>
+</head>
+<body>
+ <form>
+<table>
+<tr>
+<td>ID</td>
+<td>
+<input type="text" size=30 maxLength=6 name="id">
+</td>
+</tr>
+
+<tr>
+<td>Name</td>
+<td>
+<input type="text" size=30 maxLength=6 name="name">
+</td>
+</tr>
+
+<tr>
+<td>Desc</td>
+<td>
+<input type="text" size=30 maxLength=6 name="desc">
+</td>
+</tr>
+
+<tr>
+<td>EmailID</td>
+<td>
+<input type="text" size=30 maxLength=6 name="email">
+</td>
+</tr>
+
+<tr>
+<td>DOB</td>
+<td>
+<input type="text" size=30 maxLength=6 name="dob">
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td>
+<input type="submit" value="Click" size=40 name="id">
+</td>
+</tr>
+</table>
+  
+</form> 
+</body>
+</html>
